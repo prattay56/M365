@@ -1,4 +1,4 @@
-#COnnect 
+
 
 #Make sure to connect to AAD  and SPOservice first.
 #Get all ODB sites
