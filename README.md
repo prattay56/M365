@@ -1,5 +1,5 @@
 # sharepointonline
 Scripts for 
-SharePoint online
-Security and compliance center
+SharePoint online,
+Security and compliance center,
 OneDrive
