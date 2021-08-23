@@ -1,0 +1,1 @@
+New-ActivityAlert -Name "Malicious Files in Libraries-admin created" -Description "Notifies admins when malicious files are detected in SharePoint Online, OneDrive, or Microsoft Teams" -Category ThreatManagement -Operation FileMalwareDetected -NotifyUser "aman@dellsp.onmicrosoft.com","admin@dellsp.onmicrosoft.com"
