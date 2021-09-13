@@ -1,7 +1,7 @@
 $tenantAdmin = Read-Host "Enter SPO admin URL "
 $hubSiteurl = Read-Host "Enter HUb Site URL " 
 
-# Browse the Logo pnp file you have downloaded from the Source Hub site.
+# Browse the Logo pnp file you have downloaded from the Source Hub site
 $FileBrowser = New-Object System.Windows.Forms.OpenFileDialog -Property @{ 
     InitialDirectory = [Environment]::GetFolderPath('Desktop') 
 
