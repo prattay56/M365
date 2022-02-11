@@ -16,7 +16,7 @@ foreach ($subs in $Allsites) {
     $PHL = Get-PnPList -Identity  $lib 
     if ( $Null -ne $PHL ) {
         Write-Host "PHL found in site" $subs.Url "Attempting to delete PHL" -ForegroundColor Cyan
-        # Remove-PnPList -Identity $PHL   -Force -Verbose
+        Remove-PnPList -Identity $PHL   -Force -Verbose
     }
     #Getting all the sub sites under current site	
     $allsubsites = Get-PnPSubWebs -Recurse
@@ -26,7 +26,7 @@ foreach ($subs in $Allsites) {
         $PHL1 = Get-PnPList -Identity  $lib 
         if ( $Null -ne $PHL1 ) {
             Write-Host "PHL found in subsite" $allsubsite.Url "Attempting to delete PHL" -ForegroundColor Cyan
-            # Remove-PnPList -Identity $PHL1   -Force -Verbose
+            Remove-PnPList -Identity $PHL1   -Force -Verbose
         }
     }	
 }
