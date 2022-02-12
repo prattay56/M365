@@ -55,7 +55,7 @@ try {
 catch {
     Write-Host "Error" $_.exception.message -ForegroundColor Red
 }
-# Disconnect-ExchangeOnline -Confirm:$false
+Disconnect-ExchangeOnline -Confirm:$false
 
 
 
