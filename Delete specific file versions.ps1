@@ -2,22 +2,14 @@
 $SiteURL = Read-Host "Enter Site URL"
 $ListName = Read-Host "Enter the Document library Name Eg: Shared Documents"
   
-$Olddate = Read-Host 'Enter Older date'
-trap { 'You did not enter a valid date!'; continue }
-. {
-    $Olddate = [DateTime]::Parse($Olddate)
-    $Olddate
-}
-
+$Olddate = Read-Host 'Enter Older date'  
+$Olddate = [DateTime]::Parse($Olddate)
 $Newdate = Read-Host 'Enter Newer date'
-trap { 'You did not enter a valid date!'; continue }
-. {
-    $Newdate = [DateTime]::Parse($Newdate)
-    $Newdate
-} 
+$Newdate = [DateTime]::Parse($Newdate)
  
 #Connect to PnP Online
 Connect-PnPOnline -Url $SiteURL -Interactive
+# Connect-PnPOnline -Url $SiteURL -UseWebLogin
 #Get All Items from the List - Exclude 'Folder' List Items
 $ListItems = Get-PnPListItem -List $ListName -PageSize 2000 | Where { $_.FileSystemObjectType -eq "File" }
 try {
