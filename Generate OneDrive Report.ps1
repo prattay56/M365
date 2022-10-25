@@ -1,7 +1,7 @@
 #variables
 $SiteAdminUPN = Read-Host "Enter Global Admin UPN"
 $TenantSiteURL = Read-Host "Enter SharePoint admin URL"
-
+$ReportOutput = Read-Host "Enter  report path EG C:\Temp\OneDriveReport.csv"
 
 function SetSiteAdmin {
     param (
