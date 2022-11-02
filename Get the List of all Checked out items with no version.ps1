@@ -1,12 +1,11 @@
 Add-Type -Path "C:\Program Files\Common Files\microsoft shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.dll"  
 Add-Type -Path "C:\Program Files\Common Files\microsoft shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.Runtime.dll"  
 
-$siteCollectionUrl = "https://fudsk.sharepoint.com"  
-$user = "aman@sobujprantar.org"
+$siteCollectionUrl = "Your site url goes here"  
+$user = "your upn goes here"
 # You can save a plain text password in a text file
-# $SecurePass = Get-Content "C:\String\mst.txt" | ConvertTo-SecureString -AsPlainText -Force 
 $SecurePass = 'Your plain text password here' | ConvertTo-SecureString -AsPlainText -Force
-$listName = "Documents" # your library name goes here
+$listName = "Your Library name goes here" # your library name goes here
 
 function CheckNoVersionOutdocuments($url) {
     Write-Host "Connecting to site: $url"
