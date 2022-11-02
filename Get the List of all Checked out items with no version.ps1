@@ -5,7 +5,7 @@ $siteCollectionUrl = "https://fudsk.sharepoint.com"
 $user = "aman@sobujprantar.org"
 # You can save a plain text password in a text file
 # $SecurePass = Get-Content "C:\String\mst.txt" | ConvertTo-SecureString -AsPlainText -Force 
-$SecurePass = "Your plain text password here" | ConvertTo-SecureString -AsPlainText -Force
+$SecurePass = 'Your plain text password here' | ConvertTo-SecureString -AsPlainText -Force
 $listName = "Documents" # your library name goes here
 
 function CheckNoVersionOutdocuments($url) {
